@@ -1,18 +1,13 @@
-import React from "react";
-import Footer from "./footer";
-import Header from "./header";
-import Navbar from "./navbar";
-
-const InnerLayout = ({ children }) => {
+const InnerLayout = ({ children, title }) => {
     return (
         <>
             <section className="pager-sec overlay-dark">
                 <div className="container">
                     <div className="pager-sec-details">
-                        <h2>Shop</h2>
+                        <h2>{title}</h2>
                         <ul className="breadcrumb">
                             <li><a href="#" title="">Home</a></li>
-                            <li><span>&nbsp; Shop</span></li>
+                            <li><span>&nbsp; {title}</span></li>
                         </ul>
                     </div>
                 </div>
@@ -22,5 +17,7 @@ const InnerLayout = ({ children }) => {
         </>
     );
 };
+
+InnerLayout.propTypes;
 
 export default InnerLayout;

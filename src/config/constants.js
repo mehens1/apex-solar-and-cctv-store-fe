@@ -2,9 +2,10 @@ export const COMPANY_FULL_NAME = 'APEX Technologies';
 export const COMPANY_SHORT_NAME = 'APEX';
 
 export const CONTACT_INFO = {
-    phone: '+2348107100130',
+    phone: '+2348023810403',
+    altPhone: '+2347032792626',
     email: 'support@apextech.ng',
-    address: 'Adjacent Police Barracks, Jimeta Yola, Adamawa State',
+    address: 'No. 84, POWA Shopping Complex, Located at the foot of the Pedestrian Bridge near Police Roundabout, Jimeta-Yola, Adamawa State.',
 };
 
 export const SOCIAL_MEDIA_LINKS = {

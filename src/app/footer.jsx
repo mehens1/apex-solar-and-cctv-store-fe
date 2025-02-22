@@ -1,4 +1,5 @@
 import { COMPANY_FULL_NAME, CONTACT_INFO } from "../config/constants";
+import logo from '../assets/images/logo.png'
 
 const Footer = () => {
 
@@ -13,11 +14,8 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-sm-6">
                             <div className="widget widget-about">
-                                <img src="assets/images/logo.png" alt="" />
-                                <p>Security as a topic has continued to rise in popularity in the recent couple of
-                                    years, and it comes as a no surprise.</p>
-                                <p>Security and privacy are two sides of the same coin. You can’t have privacy without
-                                    security and vice versa.</p>
+                                <img src={logo} alt="logo" />
+                                <p>Apex Solar & CCTV is committed to providing innovative renewable energy and CCTV solutions that drive sustainability and security.</p>
                             </div>
 
                         </div>

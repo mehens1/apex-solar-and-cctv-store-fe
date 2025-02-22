@@ -564,7 +564,7 @@ nav ul ul li.has-childs:before {
 }
 
 .mobile-menu ul li a:before {
-    content: '+';
+    content: '';
     position: absolute;
     top: 50%;
     right: 0;
@@ -698,7 +698,7 @@ nav ul ul li.has-childs:before {
 }
 
 .banner-slide {
-    background-image: url(../images/resources/banner.jpg);
+    background-image: url(../assets/images/resources/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 240px 0 253px;
@@ -1227,7 +1227,7 @@ a {
 /* ================= CASE STUDY SECTION ================ */
 
 .case-study-sec {
-    background-image: url(../images/resources/bg2.jpg);
+    background-image: url(../assets/images/resources/bg2.jpg);
     background-repeat: no-repeat;
     background-position: right;
     padding: 100px 0 87px;
@@ -1593,7 +1593,7 @@ a {
 /* ===================== SYSTEM SECURITY SECTION =================== */
 
 .sys-system-section {
-    background-image: url(../images/resources/bg3.jpg);
+    background-image: url(../assets/images/resources/bg3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 39px 0 100px;
@@ -1822,7 +1822,7 @@ input:checked~.checkcircle:before {
 /* ===================== TESTIMONIAL SECTION =================== */
 
 .testimonial-sec {
-    background-image: url(../images/resources/bg4.jpg);
+    background-image: url(../assets/images/resources/bg4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0;
@@ -2144,7 +2144,7 @@ input:checked~.checkcircle:before {
 
 .main-footer {
     padding: 100px 0;
-    background-image: url(../images/resources/footer-bg.jpg);
+    background-image: url(../assets/images/resources/footer-bg.jpg);
     background-repeat: no-repeat;
     background-position: bottom right;
 }
@@ -2292,7 +2292,8 @@ input:checked~.checkcircle:before {
 /* ===================== PAGER SECTION =================== */
 
 .pager-sec {
-    background-image: url(../images/resources/pager-bg.jpg);
+    /* background-image: url(../assets/images/resources/pager-bg.jpg); */
+    background-image: url(../images/resources/banner2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 130px 0 127px;
@@ -2816,7 +2817,7 @@ input:checked~.checkcircle:before {
 /* =================== APPOINTMENT SECTION ================== */
 
 .appointment-section {
-    background-image: url(../images/resources/bg5.jpg);
+    background-image: url(../assets/images/resources/bg5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0;
@@ -3308,7 +3309,7 @@ input:checked~.checkcircle:before {
 /* WIDGET QUICK CONTACT */
 
 .widget-quick-contact {
-    background-image: url(../images/resources/contact-bg.jpg);
+    background-image: url(../assets/images/resources/contact-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 40px 50px;
@@ -4547,7 +4548,7 @@ select::-ms-expand {
 }
 
 .cct-jb {
-    background-image: url(../images/resources/c-bg.jpg);
+    background-image: url(../assets/images/resources/c-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;

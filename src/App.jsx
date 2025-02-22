@@ -1,9 +1,10 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppLayout from './app/layout';
 import InnerLayout from './app/inner';
 import Home from './app/pages/home';
 import Store from './app/pages/store';
+import Login from './app/pages/login';
+import Register from './app/pages/register';
 
 function App() {
 
@@ -14,10 +15,22 @@ function App() {
           <Route path="/" element={<Home />} />
 
           <Route path='/store' element={
-            <InnerLayout>
+            <InnerLayout title="Shop">
               <Store />
             </InnerLayout>
-          }></Route>
+          }/>
+
+          <Route path='/register' element={
+            <InnerLayout title="Register">
+              <Register />
+            </InnerLayout>
+          }/>
+
+          <Route path='/login' element={
+            <InnerLayout title="Login">
+              <Login />
+            </InnerLayout>
+          }/>
 
         </Routes>
       </AppLayout>

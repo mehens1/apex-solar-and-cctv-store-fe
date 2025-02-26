@@ -5,6 +5,8 @@ import Home from './app/pages/home';
 import Store from './app/pages/store';
 import Login from './app/pages/login';
 import Register from './app/pages/register';
+import Profile from './app/pages/profile';
+import Cart from './app/pages/cart';
 
 function App() {
 
@@ -29,6 +31,18 @@ function App() {
           <Route path='/login' element={
             <InnerLayout title="Login">
               <Login />
+            </InnerLayout>
+          }/>
+
+          <Route path='/profile' element={
+            <InnerLayout title="Profile">
+              <Profile />
+            </InnerLayout>
+          }/>
+
+          <Route path='/cart' element={
+            <InnerLayout title="Cart">
+              <Cart />
             </InnerLayout>
           }/>
 

@@ -3,10 +3,21 @@ import Navbar from "./navbar";
 import logo from "../assets/images/logo.png";
 import cart from "../assets/images/cart.png";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { clearToken } from "../store/actions/authAction";
+import { clearUser } from "../store/actions/userAction";
+
+// import { useDispatch } from "react-redux";
 
 const Header = () => {
   const user = useSelector((state) => state.user.user);
+
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(clearToken());
+    dispatch(clearUser());
+  };
 
   return (
     <header>
@@ -72,23 +83,44 @@ const Header = () => {
               <Navbar />
             </nav>
 
-            {!user && (
+            {!user ? (
               <NavLink to="/login" className="quote-btn">
                 Login
               </NavLink>
+            ) : (
+              <div className="dropdown search-frm">
+                <div href="#" title="Profile" className="profile-btn">
+                  <i
+                    className="fa fa-user-circle dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  ></i>
+                  <div
+                    className="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a className="dropdown-item">
+                      {user.firstName} {user.lastName}
+                    </a>
+                    <NavLink to="/profile" className="dropdown-item">
+                      Profile
+                    </NavLink>
+                    
+                    <a className="dropdown-item" onClick={handleLogout}>
+                      Logout
+                    </a>
+                  </div>
+                </div>
+              </div>
             )}
 
-            <div className="cart-dv">
-              <a
-                href="#"
-                title="Cart"
-                className="cart-btn position-relative d-flexs"
-              >
+            <div className="pl-5 search-frm">
+              <NavLink to={"/cart"} title="Cart">
                 <img src={cart} alt="Cart" />
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  99+
-                </span>
-              </a>
+              </NavLink>
             </div>
 
             <div className="search-frm">
@@ -96,6 +128,7 @@ const Header = () => {
                 <i className="fa fa-search"></i>
               </a>
             </div>
+
             <div className="clearfix"></div>
           </div>
         </div>

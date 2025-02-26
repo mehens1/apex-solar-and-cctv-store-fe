@@ -1,11 +1,7 @@
 export const errorHandler = (error) => {
   if (!error) return "An unknown error occurred";
 
-  console.log("Handling error:", error);
-
   if (error.response) {
-      console.log("Handling Axios error:", error.response);
-
       if (error.response.status === 422) {
           return error.response.data.message || "Validation error occurred";
       }

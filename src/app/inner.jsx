@@ -6,7 +6,7 @@ const InnerLayout = ({ children, title }) => {
                     <div className="pager-sec-details">
                         <h2>{title}</h2>
                         <ul className="breadcrumb">
-                            <li><a href="#" title="">Home</a></li>
+                            <li><a href="/" title="">Home</a></li>
                             <li><span>&nbsp; {title}</span></li>
                         </ul>
                     </div>

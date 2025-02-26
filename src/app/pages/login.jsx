@@ -37,6 +37,7 @@ const Login = () => {
       const { token, user } = response;
       dispatch(setToken(token));
       dispatch(setUser(user));
+
       navigate("/store");
     } catch (error) {
       setErrors({ general: error.message });

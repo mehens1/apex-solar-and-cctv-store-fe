@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const CustomInput = ({
+const CustomTextArea = ({
   label,
   type = "text",
   id,
@@ -18,7 +18,7 @@ const CustomInput = ({
       <label htmlFor={id} className="form-label">
         {label}
       </label>
-      <input
+      <textarea
         type={type}
         name={name}
         className={`form-control w-100 my-2 ${error ? "is-invalid" : ""}`}
@@ -30,13 +30,14 @@ const CustomInput = ({
         aria-invalid={error ? "true" : "false"}
         {...rest} // Spread any extra props
       />
+      {/* </textarea> */}
       {error && <div className="invalid-feedback">{error}</div>}
       {helperText && !error && <div className="form-text">{helperText}</div>}
     </div>
   );
 };
 
-CustomInput.propTypes = {
+CustomTextArea.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.string,
   id: PropTypes.string.isRequired,
@@ -49,4 +50,4 @@ CustomInput.propTypes = {
   disabled: PropTypes.bool,
 };
 
-export default CustomInput;
+export default CustomTextArea;

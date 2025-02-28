@@ -18,3 +18,5 @@ export const BUSINESS_HOURS = {
     weekdays: '9:00 AM - 6:00 PM',
     weekends: '10:00 AM - 4:00 PM',
 };
+
+export const VAT = 0.0;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import CustomInput from "../../components/customInput";
+import CustomInput from "../../components/customSelectDropdown";
 
 const Profile = () => {
   const user = useSelector((state) => state.user.user);

@@ -4,8 +4,7 @@ import aboutThump from "/src/assets/images/resources/abt-thumb.png";
 import img1 from "/src/assets/images/resources/img1.jpg";
 import img2 from "/src/assets/images/resources/img2.jpg";
 import img3 from "/src/assets/images/resources/img3.jpg";
-// import auth1 from "/src/assets/images/resources/auth1.jpg";
-// import auth2 from "/src/assets/images/resources/auth2.jpg";
+import banner from "../../assets/images/resources/banner.jpg";
 import banner2 from "../../assets/images/resources/banner2.jpg";
 import banner3 from "/src/assets/images/resources/banner3.jpg";
 
@@ -14,7 +13,8 @@ const Home = () => {
         <>
             <section className="banner-section white-box">
                 <div className="banner-slider style1">
-                    <div className="banner-slide slick-slide overlay-dark">
+                    <div className="banner-slide slick-slide overlay-dark"
+                    style={{ backgroundImage: `url(${banner})` }}>
                         <div className="container">
                             <div className="banner-content">
                                 <h1>Empowering You with Clean Energy & Unmatched Security.</h1>

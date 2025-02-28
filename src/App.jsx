@@ -7,6 +7,7 @@ import Login from './app/pages/login';
 import Register from './app/pages/register';
 import Profile from './app/pages/profile';
 import Cart from './app/pages/cart';
+import Checkout from './app/pages/checkout';
 
 function App() {
 
@@ -43,6 +44,12 @@ function App() {
           <Route path='/cart' element={
             <InnerLayout title="Cart">
               <Cart />
+            </InnerLayout>
+          }/>
+
+          <Route path='/checkout' element={
+            <InnerLayout title="Checkout">
+              <Checkout />
             </InnerLayout>
           }/>
 

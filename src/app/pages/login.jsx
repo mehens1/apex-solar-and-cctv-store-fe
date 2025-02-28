@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import CustomInput from "../../components/customInput";
+import CustomInput from "../../components/customInput.jsx";
 import { login } from "../../services/authService";
 import useFormValidator from "../../hooks/useFormValidator";
 import { validateLogin } from "../../utils/validationRules";

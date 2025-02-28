@@ -1,12 +1,11 @@
 import PropTypes from "prop-types";
 
-const CustomInput = ({
+const CustomSelectDropdown = ({
   label,
-  type = "text",
   id,
   name,
-  placeholder = "",
-  value = "",
+  value,
+  options = [],
   onChange,
   helperText,
   error,
@@ -18,35 +17,46 @@ const CustomInput = ({
       <label htmlFor={id} className="form-label">
         {label}
       </label>
-      <input
-        type={type}
+      <select
         name={name}
         className={`form-control w-100 my-2 ${error ? "is-invalid" : ""}`}
         id={id}
-        placeholder={placeholder}
-        value={value || ""}
+        value={value}
         onChange={onChange}
         disabled={disabled}
         aria-invalid={error ? "true" : "false"}
-        {...rest} // Spread any extra props
-      />
+        {...rest}
+      >
+        <option value="" disabled>
+          Select {label}
+        </option>
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
       {error && <div className="invalid-feedback">{error}</div>}
       {helperText && !error && <div className="form-text">{helperText}</div>}
     </div>
   );
 };
 
-CustomInput.propTypes = {
+CustomSelectDropdown.propTypes = {
   label: PropTypes.string.isRequired,
-  type: PropTypes.string,
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
   value: PropTypes.string,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   onChange: PropTypes.func.isRequired,
   helperText: PropTypes.string,
   error: PropTypes.string,
   disabled: PropTypes.bool,
 };
 
-export default CustomInput;
+export default CustomSelectDropdown;

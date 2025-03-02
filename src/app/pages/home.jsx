@@ -1,12 +1,13 @@
 import { CONTACT_INFO } from "../../config/constants";
-import aboutImg from "/src/assets/images/resources/about-img.jpg";
-import aboutThump from "/src/assets/images/resources/abt-thumb.png";
-import img1 from "/src/assets/images/resources/img1.jpg";
-import img2 from "/src/assets/images/resources/img2.jpg";
-import img3 from "/src/assets/images/resources/img3.jpg";
-import banner from "../../assets/images/resources/banner.jpg";
-import banner2 from "../../assets/images/resources/banner2.jpg";
-import banner3 from "/src/assets/images/resources/banner3.jpg";
+import aboutImg from "/assets/images/resources/about-img.jpg";
+import aboutThump from "/assets/images/resources/abt-thumb.png";
+import img1 from "/assets/images/resources/img1.jpg";
+import img2 from "/assets/images/resources/img2.jpg";
+import img3 from "/assets/images/resources/img3.jpg";
+import banner from "../../../public/assets/images/resources/banner.jpg";
+import banner2 from "../../../public/assets/images/resources/banner2.jpg";
+import banner3 from "/assets/images/resources/banner3.jpg";
+import bg3 from "/assets/images/resources/bg3.jpg";
 
 const Home = () => {
     return (
@@ -245,83 +246,83 @@ const Home = () => {
                                         <div className="gallery-row">
                                             <div className="gallery-thumb">
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb1.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb1.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb2.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb2.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb3.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb3.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb4.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb4.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb1.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb1.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb2.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb2.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb3.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb3.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb4.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb4.jpg" alt="" />
                                                 </div>
                                             </div>
                                             <div className="gallery-images-slide" id="custom-gallery">
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal2.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal2.jpg" title=""
+                                                    <img src="/assets/images/resources/gal2.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal2.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal4.jpg" title=""
+                                                    <img src="/assets/images/resources/gal4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/ga4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/ga4.jpg" title=""
+                                                    <img src="/assets/images/resources/ga4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/ga4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal3.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal3.jpg" title=""
+                                                    <img src="/assets/images/resources/gal3.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal3.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal2.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal2.jpg" title=""
+                                                    <img src="/assets/images/resources/gal2.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal2.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal4.jpg" title=""
+                                                    <img src="/assets/images/resources/gal4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/ga4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/ga4.jpg" title=""
+                                                    <img src="/assets/images/resources/ga4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/ga4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal3.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal3.jpg" title=""
+                                                    <img src="/assets/images/resources/gal3.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal3.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
@@ -350,83 +351,83 @@ const Home = () => {
                                         <div className="gallery-row">
                                             <div className="gallery-thumb">
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb1.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb1.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb2.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb2.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb3.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb3.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb4.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb4.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb1.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb1.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb2.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb2.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb3.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb3.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb4.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb4.jpg" alt="" />
                                                 </div>
                                             </div>
                                             <div className="gallery-images-slide">
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal2.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal2.jpg" title=""
+                                                    <img src="/assets/images/resources/gal2.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal2.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal4.jpg" title=""
+                                                    <img src="/assets/images/resources/gal4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/ga4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/ga4.jpg" title=""
+                                                    <img src="/assets/images/resources/ga4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/ga4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal3.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal3.jpg" title=""
+                                                    <img src="/assets/images/resources/gal3.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal3.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal2.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal2.jpg" title=""
+                                                    <img src="/assets/images/resources/gal2.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal2.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal4.jpg" title=""
+                                                    <img src="/assets/images/resources/gal4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/ga4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/ga4.jpg" title=""
+                                                    <img src="/assets/images/resources/ga4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/ga4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal3.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal3.jpg" title=""
+                                                    <img src="/assets/images/resources/gal3.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal3.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
@@ -455,83 +456,83 @@ const Home = () => {
                                         <div className="gallery-row">
                                             <div className="gallery-thumb">
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb1.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb1.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb2.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb2.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb3.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb3.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb4.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb4.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb1.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb1.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb2.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb2.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb3.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb3.jpg" alt="" />
                                                 </div>
                                                 <div className="gallery-th">
-                                                    <img src="/src/assets/images/resources/thumb4.jpg" alt="" />
+                                                    <img src="/assets/images/resources/thumb4.jpg" alt="" />
                                                 </div>
                                             </div>
                                             <div className="gallery-images-slide">
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal2.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal2.jpg" title=""
+                                                    <img src="/assets/images/resources/gal2.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal2.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal4.jpg" title=""
+                                                    <img src="/assets/images/resources/gal4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/ga4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/ga4.jpg" title=""
+                                                    <img src="/assets/images/resources/ga4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/ga4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal3.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal3.jpg" title=""
+                                                    <img src="/assets/images/resources/gal3.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal3.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal2.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal2.jpg" title=""
+                                                    <img src="/assets/images/resources/gal2.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal2.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal4.jpg" title=""
+                                                    <img src="/assets/images/resources/gal4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/ga4.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/ga4.jpg" title=""
+                                                    <img src="/assets/images/resources/ga4.jpg" alt="" />
+                                                    <a href="/assets/images/resources/ga4.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
                                                 </div>
                                                 <div className="gallery-image">
-                                                    <img src="/src/assets/images/resources/gal3.jpg" alt="" />
-                                                    <a href="/src/assets/images/resources/gal3.jpg" title=""
+                                                    <img src="/assets/images/resources/gal3.jpg" alt="" />
+                                                    <a href="/assets/images/resources/gal3.jpg" title=""
                                                         className="lightbox full-img">
                                                         <i className="fa fa-expand"></i>
                                                     </a>
@@ -559,7 +560,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="sys-system-section">
+            <section className="sys-system-section" style={{backgroundImage: `url(${bg3})`}}>
                 <div className="container">
                     <div className="sys-row">
                         <div className="sec-title white">

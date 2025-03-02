@@ -3,7 +3,8 @@ import Header from "./header";
 import Navbar from "./navbar";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import logo from "../assets/images/logo.png";
+// import logo from "../../public/assets/images/logo.png";
+import logo from "../../public/assets/images/logo.png";
 
 const AppLayout = ({ children }) => {
   const user = useSelector((state) => state.user.user);

@@ -1,7 +1,7 @@
 import { CONTACT_INFO } from "../config/constants";
 import Navbar from "./navbar";
-import logo from "../assets/images/logo.png";
-import cart from "../assets/images/cart.png";
+import logo from "../../public/assets/images/logo.png";
+import cart from "../../public/assets/images/cart.png";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { clearToken } from "../store/actions/authAction";
@@ -51,11 +51,6 @@ const Header = () => {
               <li>
                 <a href="#" title="">
                   <i className="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" title="">
-                  <i className="fab fa-pinterest-p"></i>
                 </a>
               </li>
               <li>

@@ -29,7 +29,9 @@ apiInstance.interceptors.request.use(
 apiInstance.interceptors.response.use(
     (response) => response,
     (error) => {
-        if (error.response && error.response.status === 401) {
+        console.log("axxxxx: ", error.response.data.message);
+        // if (error.response && error.response.status === 401 && error.response.message == "Unauthorized") {
+        if (error.response && error.response.status === 401 && error.response.data.message == "Unauthenticated.") {
             store.dispatch(clearUser());
             store.dispatch(clearToken());
             SweetAlert({

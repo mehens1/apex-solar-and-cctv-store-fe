@@ -23,3 +23,12 @@ export const addToCartService = async (product) => {
         throw errorHandler(error);
     }
 };
+
+export const clearCartService = async () => {
+    try {
+        const response = await apiInstance.delete(`/user/cart`);
+        return response.data.data;
+    } catch (error) {   
+        throw errorHandler(error);
+    }
+};

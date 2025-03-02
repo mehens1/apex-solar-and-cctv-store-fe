@@ -1,26 +1,35 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CustomInput from "../../components/customInput";
-import { checkoutService, verifyOrderService } from "../../services/orderService";
+import { checkoutService } from "../../services/orderService";
 import CustomTextArea from "../../components/customTextArea";
 import PrimaryBtn from "../../components/primaryBtn";
 import { SweetAlert } from "../../components/customSwal";
 
 import { VAT } from "../../config/constants";
 import { useNavigate } from "react-router-dom";
-import { clearCartService } from "../../services/cartService";
 
-const Checkout = () => {
+const OrderHistory = () => {
   const navigate = useNavigate();
   const user = useSelector((state) => state.user.user);
   const cart = useSelector((state) => state.cart.items) ?? [];
+
+  if(!user) {
+    SweetAlert({
+      icon: "info",
+      title: "Oppsss!",
+      text: "You can't access this page because you are not logged in!",
+      onConfirm: () => navigate('/store'),
+    });
+  };
 
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
     email: "",
     phone: "",
-    address: "",
+    billing_address: "",
+    shipping_address: "",
     payment_method: "",
     discount_code: "",
     vat: "",
@@ -42,7 +51,8 @@ const Checkout = () => {
         last_name: user.lastName ?? "",
         email: user.email ?? "",
         phone: user.phone ?? "",
-        address: user.address ?? "",
+        billing_address: user.address ?? "",
+        shipping_address: user.address ?? "",
         vat: VAT_RATE,
       }));
     }
@@ -81,15 +91,6 @@ const Checkout = () => {
     else if (!/\S+@\S+\.\S+/.test(formData.email))
       errors.email = "Invalid email format";
     if (!formData.phone) errors.phone = "Phone number is required";
-    if (!formData.address) errors.address = "Address is required";
-    if (!formData.payment_method) {
-      SweetAlert({
-        icon: "info",
-        title: "Error",
-        text: "Payment method is required!"
-      });
-      errors.payment_method = "Payment method is required"
-    };
 
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
@@ -97,13 +98,12 @@ const Checkout = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormErrors({});
-        
+    setFormErrors({}); // Reset previous errors
+
     if (validateForm()) {
       const updatedFormData = {
         ...formData,
-        shipping_address: formData.address,
-        billing_address: formData.address,
+        shipping_address: formData.billing_address,
         items: formData.items.map((item) => ({
           id: item.product_id,
           quantity: item.quantity,
@@ -116,22 +116,19 @@ const Checkout = () => {
         const reference = response.reference;
         
         if (response && response.authorization_url) {
-
-          SweetAlert({
-            icon: "info",
-            title: "Processing Payment",
-            text: "Payment process is on-going another page, kindly complete/close the payment page to proceed...",
-            actionNeeded: false
-          });
+          // window.open(response.authorization_url, "_blank");
 
           const paymentWindow = window.open(
             response.authorization_url,
             "_blank"
           );
 
+          // Poll for payment completion
           const checkPaymentCompletion = setInterval(async () => {
             if (paymentWindow.closed) {
               clearInterval(checkPaymentCompletion);
+
+              console.log("window reference: ", reference);
 
               if (reference) {
                 verifyPayment(reference);
@@ -143,7 +140,7 @@ const Checkout = () => {
                 });
               }
             }
-          }, 2000);
+          }, 2000); // Check every 2 seconds
         }
       } catch (error) {
         SweetAlert({
@@ -151,26 +148,31 @@ const Checkout = () => {
           title: "Error!",
           text: error.message || "An error occurred",
         });
+      } finally {
         setLoading(false);
       }
     }
   };
 
   const verifyPayment = async (reference) => {
+    console.log("reference: ", reference);
     
     try {
-      var response = await verifyOrderService(reference);
+      // const response = await fetch(`http://127.0.0.1:8004/api/order?reference=${reference}`);
+      const response = await fetch(`http://127.0.0.1:8004/api/order?trxref=${reference}&reference=${reference}`);
+      
+      console.log("mememeem reference: ", response);
+      const data = await response.json();
   
-      if (response.details.status) {
-        clearCartService();
+      if (data.details.status) {
         SweetAlert({
           icon: "success",
           title: "Payment Successful!",
           text: "Your order has been processed.",
-          confirmText: "Proceed",
-          onConfirm: () => moveToOrderDetails(reference)
         });
   
+        // Navigate to success page
+        window.location.href = "/order-success";
       } else {
         SweetAlert({
           icon: "error",
@@ -185,12 +187,7 @@ const Checkout = () => {
         title: "Error!",
         text: "Could not verify payment.",
       });
-      setLoading(false);
     }
-  };
-
-  const moveToOrderDetails = (reference) => {
-    navigate(`/order-details?reference=${reference}`);
   };
 
   return (
@@ -262,12 +259,12 @@ const Checkout = () => {
                     <div className="form-group">
                       <CustomTextArea
                         label="Address"
-                        id="address"
-                        name="address"
+                        id="billing_address"
+                        name="billing_address"
                         placeholder="Enter Address"
-                        value={formData.address}
+                        value={formData.billing_address}
                         onChange={handleChange}
-                        error={formErrors.address}
+                        error={formErrors.billing_address}
                         disabled={!isEditing}
                       />
                     </div>
@@ -350,6 +347,7 @@ const Checkout = () => {
                     </div>
 
                     <div className="text-center mt-5">
+                      {/* <strong>Total: ₦{total.toFixed(2)}</strong> */}
                       <strong>
                         Total:{" "}
                         <span className="font-weight-bold display-4">
@@ -377,7 +375,7 @@ const Checkout = () => {
                       label="Proceed to Payment"
                       type="submit"
                       loading={loading}
-                      disabled={loading}
+                      disabled={loading || Object.keys(formErrors).length > 0}
                     />
                   </form>
                 </div>
@@ -390,4 +388,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default OrderHistory;

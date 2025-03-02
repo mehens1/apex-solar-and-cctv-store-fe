@@ -8,6 +8,8 @@ import Register from './app/pages/register';
 import Profile from './app/pages/profile';
 import Cart from './app/pages/cart';
 import Checkout from './app/pages/checkout';
+import Order from './app/pages/order';
+import OrderHistory from './app/pages/orderHistory';
 
 function App() {
 
@@ -50,6 +52,18 @@ function App() {
           <Route path='/checkout' element={
             <InnerLayout title="Checkout">
               <Checkout />
+            </InnerLayout>
+          }/>
+
+          <Route path='/order-history' element={
+            <InnerLayout title="Order History">
+              <OrderHistory />
+            </InnerLayout>
+          }/>
+
+          <Route path='/order-details' element={
+            <InnerLayout title="Order Details">
+              <Order />
             </InnerLayout>
           }/>
 

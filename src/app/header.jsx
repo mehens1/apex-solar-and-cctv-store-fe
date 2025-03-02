@@ -105,6 +105,10 @@ const Header = () => {
                     <a className="dropdown-item">
                       {user.firstName} {user.lastName}
                     </a>
+                    <NavLink to="/order-history" className="dropdown-item">
+                      Order History
+                    </NavLink>
+
                     <NavLink to="/profile" className="dropdown-item">
                       Profile
                     </NavLink>

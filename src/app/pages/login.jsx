@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import CustomInput from "../../components/customInput.jsx";
 import { login } from "../../services/authService";
@@ -11,6 +11,9 @@ import { setToken } from "../../store/actions/authAction.jsx";
 
 const Login = () => {
   const dispatch = useDispatch();
+
+  const [searchParams] = useSearchParams();
+  const urlMessage = searchParams.get("message");
 
   const {
     formData,
@@ -24,6 +27,12 @@ const Login = () => {
 
   const [apiError, setApiError] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (urlMessage) {
+      setApiError(urlMessage);
+    }
+  }, [urlMessage]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

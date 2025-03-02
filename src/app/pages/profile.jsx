@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CustomInput from "../../components/customSelectDropdown";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const navigate = useNavigate();
+
   const user = useSelector((state) => state.user.user);
   const [loading, setLoading] = useState(false);
+
+  if(!user) {
+    navigate(`/login?message=You are not permited to visit the 'Profile' page until you are logged in!`);
+  }
 
   const [profileData, setProfileData] = useState({
     firstName: "",
@@ -48,7 +55,6 @@ const Profile = () => {
     setLoading(true);
     try {
       console.log("Updating Profile:", profileData);
-      // Dispatch Redux action or API call
     } catch (error) {
       console.error("Profile update failed:", error);
     } finally {

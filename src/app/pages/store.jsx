@@ -109,7 +109,7 @@ const Store = () => {
                                     </a>
                                   </h3>
                                   <span>
-                                    <b>
+                                    <b className="font-weight-bold">
                                       ₦{" "}
                                       {(
                                         Number(product.selling_price) || 0

@@ -8,15 +8,18 @@ export const SweetAlert = ({
     title = "",
     text = "",
     confirmText = "OK",
-    onConfirm = null
+    onConfirm = null,
+    actionNeeded = true,
 }) => {
     customSwal.fire({
         icon: icon,
         title: title,
         text: text,
-        confirmText: confirmText,
+        confirmButtonText: confirmText,
         confirmButtonColor: icon == "error" ? "#b00202" : "#fa6a02",
+        allowOutsideClick: false,
         allowEscapeKey: false,
+        showConfirmButton: actionNeeded
     }).then((result) => {
         if (result.isConfirmed && onConfirm) {
             onConfirm();

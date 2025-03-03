@@ -4,10 +4,9 @@ import aboutThump from "/assets/images/resources/abt-thumb.png";
 import img1 from "/assets/images/resources/img1.jpg";
 import img2 from "/assets/images/resources/img2.jpg";
 import img3 from "/assets/images/resources/img3.jpg";
-import banner from "../../../public/assets/images/resources/banner.jpg";
-import banner2 from "../../../public/assets/images/resources/banner2.jpg";
+import banner from "/assets/images/resources/banner.jpg";
+import banner2 from "/assets/images/resources/banner2.jpg";
 import banner3 from "/assets/images/resources/banner3.jpg";
-import bg3 from "/assets/images/resources/bg3.jpg";
 
 const Home = () => {
     return (
@@ -560,7 +559,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="sys-system-section" style={{backgroundImage: `url(${bg3})`}}>
+            <section className="sys-system-section">
                 <div className="container">
                     <div className="sys-row">
                         <div className="sec-title white">

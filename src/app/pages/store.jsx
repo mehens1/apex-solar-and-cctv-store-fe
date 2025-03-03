@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchProducts } from "../../services/productService";
 import { fetchCategories } from "../../services/categoryService";
-import productPlaceholder from "../../../public/assets/images/product-image-placeholder.png";
+import productPlaceholder from "/assets/images/product-image-placeholder.png";
 import { handleAddToCart } from "../../utils/handleAddToCart";
 import { useDispatch, useSelector } from "react-redux";
 

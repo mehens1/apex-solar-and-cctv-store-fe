@@ -1,16 +1,16 @@
 import { CONTACT_INFO } from "../config/constants";
 import Navbar from "./navbar";
-import logo from "../../public/assets/images/logo.png";
-import cart from "../../public/assets/images/cart.png";
-import { NavLink } from "react-router-dom";
+import logo from "/assets/images/logo.png";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { clearToken } from "../store/actions/authAction";
 import { clearUser } from "../store/actions/userAction";
 
-// import { useDispatch } from "react-redux";
-
 const Header = () => {
+  const navigate = useNavigate();
   const user = useSelector((state) => state.user.user);
+  const cartItems = useSelector((state) => state.cart.items);
+  const cartItemCount = cartItems?.length || 0;
 
   const dispatch = useDispatch();
 
@@ -28,7 +28,7 @@ const Header = () => {
               <li>
                 <i className="fa fa-envelope"></i>
                 <span>
-                  <a href={"mailto: " + CONTACT_INFO.email}></a>
+                  <a href={"mailto:" + CONTACT_INFO.email}></a>
                   {CONTACT_INFO.email}
                 </span>
               </li>
@@ -71,8 +71,39 @@ const Header = () => {
                 <img src={logo} alt="logo" />
               </a>
             </div>
+
             <a href="#" title="" className="menu-btn">
               <i className="fa fa-bars"></i>
+            </a>
+
+            <a
+              href="#"
+              title=""
+              onClick={() => navigate('/cart')}
+              className="cart-btn mr-3"
+              style={{ position: "relative" }}
+            >
+              <i
+                className="fa-solid fa-cart-shopping primary-text"
+                style={{ fontSize: "0.7em" }}
+              ></i>
+              {cartItemCount > 0 && (
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "-5px",
+                    right: "-10px",
+                    background: "red",
+                    color: "white",
+                    borderRadius: "50%",
+                    padding: "2px 5px",
+                    fontSize: "0.3em",
+                    lineHeight: 1,
+                  }}
+                >
+                  {cartItemCount}
+                </span>
+              )}
             </a>
             <nav>
               <Navbar />
@@ -84,7 +115,11 @@ const Header = () => {
               </NavLink>
             ) : (
               <div className="dropdown search-frm">
-                <div href="#" title="Profile" className="profile-btn">
+                <div
+                  href="#"
+                  title="Profile"
+                  className="profile-btn"
+                >
                   <i
                     className="fa fa-user-circle dropdown-toggle"
                     type="button"
@@ -107,7 +142,7 @@ const Header = () => {
                     <NavLink to="/profile" className="dropdown-item">
                       Profile
                     </NavLink>
-                    
+
                     <a className="dropdown-item" onClick={handleLogout}>
                       Logout
                     </a>
@@ -118,7 +153,34 @@ const Header = () => {
 
             <div className="pl-5 search-frm">
               <NavLink to={"/cart"} title="Cart">
-                <img src={cart} alt="Cart" />
+              <a
+              href="#"
+              title=""
+              className=""
+              style={{ position: "relative" }}
+            >
+              <i
+                className="fa-solid fa-cart-shopping primary-text"
+                style={{ fontSize: "1.7em" }}
+              ></i>
+              {cartItemCount > 0 && (
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "-20px",
+                    right: "-10px",
+                    background: "red",
+                    color: "white",
+                    borderRadius: "50%",
+                    padding: "2px 5px",
+                    // fontSize: "0.3em",
+                    lineHeight: 1,
+                  }}
+                >
+                  {cartItemCount}
+                </span>
+              )}
+            </a>
               </NavLink>
             </div>
 

@@ -9,6 +9,8 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart.items) ?? [];
   const dispatch = useDispatch();
 
+  console.log("current cart: ", cart);
+
   const [total, setTotal] = useState(0);
   const VAT_RATE = 0.0;
 

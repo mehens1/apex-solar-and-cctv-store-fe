@@ -1,28 +1,3 @@
-/*===================== TABLE OF CONTENT =======================
-
-
-1.  3 HOMEPAGES
-2.  FONT AWESOME FONTS 
-3.  RESET CSS
-4.  CROSS BROWSER COMPATABILITY
-5.  SEARCH
-6.  DROPDOWN MENUS
-7.  SECURITY SYSTEM SECTION
-8.  RESPONSIVE HEADER
-9.  SLICK SLIDER (BANNER)
-10. ABOUT PAGE
-11. BLOG PAGES
-12. CLIENT'S FEEDBACK
-13. SERVICES PAGES
-14. 3 DIFFERENT COLOR SCHEMES
-15. CONTACT US
-
-=============================================================*/
-
-/* ================================================================================== 
-									Fonts
-===================================================================================== */
-
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
 /* ================================================================================== 
 										Reset Css
@@ -137,6 +112,14 @@ body {
     font-family: 'Arimo', sans-serif;
     line-height: 1;
     overflow-x: hidden;
+}
+
+.primary-text{
+    color: orange;
+}
+
+.primary-bg{
+    background-color: orange;
 }
 
 ul {
@@ -522,6 +505,18 @@ nav ul ul li.has-childs:before {
     display: none;
 }
 
+.cart-btn {
+    float: right;
+    font-size: 36px;
+    display: none !important;
+}
+
+@media (max-width: 1200px) {
+    .cart-btn {
+      display: block !important;
+    }
+  }
+
 /* ================ MOBILE MENU ============== */
 
 .mobile-menu {
@@ -731,7 +726,7 @@ nav ul ul li.has-childs:before {
 }
 
 .banner-slide {
-    background-image: url(../../public/assets/images/resources/banner.jpg);
+    background-image: url(../../assets/images/resources/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 240px 0 253px;
@@ -1260,7 +1255,7 @@ a {
 /* ================= CASE STUDY SECTION ================ */
 
 .case-study-sec {
-    background-image: url(../../public/assets/images/resources/bg2.jpg);
+    background-image: url(../../assets/images/resources/bg2.jpg);
     background-repeat: no-repeat;
     background-position: right;
     padding: 100px 0 87px;
@@ -1626,7 +1621,7 @@ a {
 /* ===================== SYSTEM SECURITY SECTION =================== */
 
 .sys-system-section {
-    background-image: url(../../public/assets/images/resources/bg3.jpg);
+    background-image: url(../../assets/images/resources/bg3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 39px 0 100px;
@@ -1855,7 +1850,7 @@ input:checked~.checkcircle:before {
 /* ===================== TESTIMONIAL SECTION =================== */
 
 .testimonial-sec {
-    background-image: url(../../public/assets/images/resources/bg4.jpg);
+    background-image: url(../../assets/images/resources/bg4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0;
@@ -2177,7 +2172,7 @@ input:checked~.checkcircle:before {
 
 .main-footer {
     padding: 100px 0;
-    background-image: url(../../public/assets/images/resources/footer-bg.jpg);
+    background-image: url(../../assets/images/resources/footer-bg.jpg);
     background-repeat: no-repeat;
     background-position: bottom right;
 }
@@ -2325,7 +2320,7 @@ input:checked~.checkcircle:before {
 /* ===================== PAGER SECTION =================== */
 
 .pager-sec {
-    /* background-image: url(../../public/assets/images/resources/pager-bg.jpg); */
+    /* background-image: url(../../assets/images/resources/pager-bg.jpg); */
     background-image: url(../images/resources/banner2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -2850,7 +2845,7 @@ input:checked~.checkcircle:before {
 /* =================== APPOINTMENT SECTION ================== */
 
 .appointment-section {
-    background-image: url(../../public/assets/images/resources/bg5.jpg);
+    background-image: url(../../assets/images/resources/bg5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0;
@@ -3342,7 +3337,7 @@ input:checked~.checkcircle:before {
 /* WIDGET QUICK CONTACT */
 
 .widget-quick-contact {
-    background-image: url(../../public/assets/images/resources/contact-bg.jpg);
+    background-image: url(../../assets/images/resources/contact-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 40px 50px;
@@ -4581,7 +4576,7 @@ select::-ms-expand {
 }
 
 .cct-jb {
-    background-image: url(../../public/assets/images/resources/c-bg.jpg);
+    background-image: url(../../assets/images/resources/c-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;

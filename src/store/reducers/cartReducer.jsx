@@ -41,16 +41,15 @@ const cartReducer = (state = initialState, action) => {
             : item
         );
       } else {
-        // Item does not exist, add it to the cart
-        // updatedCart = [...state.items, action.payload.itemId];
-        const { id, item, image, selling_price } = action.payload.itemId;
+        // console.log("action.payload.itemId: ", action.payload.itemId);
+        const product = action.payload.itemId;
         updatedCart = [
           ...state.items,
-          { id, item, image, selling_price, quantity: 1 },
+          { product, quantity: 1 },
         ];
       }
 
-      console.log("After update:", updatedCart);
+      // console.log("After update:", updatedCart);
       return { ...state, items: updatedCart };
     }
 

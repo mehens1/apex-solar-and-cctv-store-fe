@@ -1,5 +1,5 @@
 import { COMPANY_FULL_NAME, CONTACT_INFO } from "../config/constants";
-import logo from '../../public/assets/images/logo.png'
+import logo from '/assets/images/logo.png'
 
 const Footer = () => {
 

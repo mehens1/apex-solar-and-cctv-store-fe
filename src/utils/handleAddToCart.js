@@ -1,6 +1,6 @@
 import { SweetAlert } from "../components/customSwal";
 import { addToCartService } from "../services/cartService";
-import { updateCartItem } from "../store/actions/cartAction";
+import { addToCart } from "../store/actions/cartAction";
 import { errorHandler } from "./errorHandling";
 
 export const handleAddToCart = async (dispatch, product, user) => {
@@ -13,7 +13,7 @@ export const handleAddToCart = async (dispatch, product, user) => {
                 text: product.item + " Added to Cart Successfully",
             });
         }
-        dispatch(updateCartItem(product));
+        dispatch(addToCart(product));
     } catch (error) {
         console.error("Error adding to cart: ", error);
         SweetAlert({

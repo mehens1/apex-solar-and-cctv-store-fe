@@ -7,6 +7,7 @@ export const UPDATE_CART_ITEM = "UPDATE_CART_ITEM";
 export const CLEAR_CART = "CLEAR_CART";
 export const SET_CART = "SET_CART";
 export const SYNC_CART = "SYNC_CART";
+export const UPDATE_CART_QUANTITY = "UPDATE_CART_QUANTITY";
 
 export const addToCart = (item) => ({
   type: ADD_TO_CART,
@@ -19,6 +20,11 @@ export const removeFromCart = (itemId) => ({
 });
 
 export const updateCartItem = (itemId, quantity) => ({
+  type: UPDATE_CART_ITEM,
+  payload: { itemId, quantity },
+});
+
+export const updateCartQuantity = (itemId, quantity) => ({
   type: UPDATE_CART_ITEM,
   payload: { itemId, quantity },
 });
